@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /src
 WORKDIR /src
 
-COPY dailywheaterdigest/requirements.txt .
+COPY dailydigest/requirements.txt .
 
 RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r ./requirements.txt
@@ -18,4 +18,4 @@ USER admin
 
 EXPOSE 8000
 
-COPY dailywheaterdigest ./
+COPY dailydigest ./

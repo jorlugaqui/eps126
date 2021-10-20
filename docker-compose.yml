@@ -4,9 +4,9 @@ services:
   web:
     container_name: web
     build: .
-    command: sh -c "python manage.py migrate && uvicorn dailywheaterdigest.asgi:application --host 0.0.0.0"
+    command: sh -c "python manage.py migrate && uvicorn dailydigest.asgi:application --host 0.0.0.0"
     volumes:
-      - ./dailywheaterdigest:/src/:delegated
+      - ./dailydigest:/src/:delegated
     ports:
       - "8000:8000"
     environment:

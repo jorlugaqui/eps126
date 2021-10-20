@@ -14,6 +14,6 @@ async def index(request: HttpRequest, city:str) -> JsonResponse:
     async with httpx.AsyncClient() as client:
         params : dict = {'q': city, 'appid': settings.WEATHER_API_KEY}
         # httpx.ConnectTimeout
-        logger.info(params)
+        logger.info(f'Calling openweathermap service for ${city}')
         data = await client.get(settings.WEATHER_API_URL, params=params)
     return JsonResponse(data.json())
