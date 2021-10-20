@@ -124,3 +124,24 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# API keys
+
+WEATHER_API_KEY: str = os.environ.get('WEATHER_API_KEY', '')
+WEATHER_API_URL: str = 'https://api.openweathermap.org/data/2.5/weather'
+
+# Logs
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+}
