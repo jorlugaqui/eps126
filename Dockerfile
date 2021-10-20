@@ -18,4 +18,4 @@ USER admin
 
 EXPOSE 8000
 
-COPY -R dailywheaterdigest ./
+COPY dailywheaterdigest ./
