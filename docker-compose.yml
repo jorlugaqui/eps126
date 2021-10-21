@@ -13,5 +13,6 @@ services:
       - SECRET_KEY=${SECRET_KEY}
       - DEBUG=true
       - WEATHER_API_KEY=${WEATHER_API_KEY}
+      - NEWS_API_KEY=${NEWS_API_KEY}
     stdin_open: true
     tty: true

@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.environ.get('DEBUG', '').lower() == 'true'  else False
+DEBUG = True if os.environ.get('DEBUG', '').lower() == 'true' else False
 
 ALLOWED_HOSTS = []
 
@@ -129,6 +129,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 WEATHER_API_KEY: str = os.environ.get('WEATHER_API_KEY', '')
 WEATHER_API_URL: str = 'https://api.openweathermap.org/data/2.5/weather'
+
+NEWS_API_KEY: str = os.environ.get('NEWS_API_KEY', '')
+NEWS_API_URL: str = 'https://newsapi.org/v2/top-headlines'
 
 # Logs
 
