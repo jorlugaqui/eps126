@@ -32,7 +32,7 @@ async def index(
             for result in future_results:
                 response.update(__prepare_response_data(result))
         except httpx.ConnectTimeout as e:
-            error_message: str = f'Internal API call timed out: {e}'
+            error_message = f'Internal API call timed out: {e}'
             http_status_code = 500
             logger.error(error_message, exc_info=True)
         except KeyError as e:
