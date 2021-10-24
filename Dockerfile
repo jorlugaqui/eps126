@@ -19,3 +19,5 @@ USER admin
 EXPOSE 8000
 
 COPY dailydigest ./
+
+CMD ["uvicorn", "dailydigest.asgi:application", "--host", "0.0.0.0"]
