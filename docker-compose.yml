@@ -14,5 +14,6 @@ services:
       - DEBUG=true
       - WEATHER_API_KEY=${WEATHER_API_KEY}
       - NEWS_API_KEY=${NEWS_API_KEY}
+      - EPSAGON_KEY=${EPSAGON_KEY}
     stdin_open: true
     tty: true

@@ -148,3 +148,13 @@ LOGGING = {
         'level': 'INFO',
     },
 }
+
+# Tracing
+
+if not DEBUG:
+    import epsagon
+    epsagon.init(
+        token=os.environ.get('EPSAGON_KEY', ''),
+        app_name='dailydigest-app',
+        metadata_only=False,
+    )
